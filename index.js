@@ -1,9 +1,14 @@
-const id_chatruoli = ""; // id chat roles
-const comandoruoli = "";// command <prefix + name> <-role>
-const listaruoli = ""
+// command roles
 
-const id_ruoloitaliano = "860645401438584912";
-const id_ruoloenglesh = "860645747463815210";
+const id_chatruoli = "";
+//                   ⬆️ ID role channel
+const comandoruoli = "";
+//                   ⬆️ Command roles < prefix + name > < -role >
+const listaruoli = ""
+//                 ⬆️ list roles < italian, englesh >
+
+const id_ruolonamerole = "";
+//                       ⬆️ id role
 
 client.on('message', (message) => {
     const args = message.content.split(' ')
@@ -19,24 +24,29 @@ client.on('message', (message) => {
                         message.channel.bulkDelete(2);
                     }, 5000);
                 } else {
-                  // italiano
-                    if (args[1] === "italiano") {
+                  // role gives
+                    if (args[1] === "") {
+//                                  ⬆️ name role < nameroles > < italian >
                         message.channel.send(`${message.author.username}, ti è stato aggiunto il ruolo!`)
                         setTimeout(function() {
                             message.channel.bulkDelete(2);
                         }, 3000);
-                        const ruoloitaliano = message.member.guild.roles.cache.find(role => role.id === id_ruoloitaliano)
-                        if (ruoloitaliano) message.guild.members.cache.get(message.author.id).roles.add(ruoloitaliano)
+                        const ruolo<name> = message.member.guild.roles.cache.find(role => role.id === id_ruolo<name>)
+//                                   ⬆️ name Roles                                  //                   ⬆️ this is id name roles
+                        if (ruolo<name>) message.guild.members.cache.get(message.author.id).roles.add(ruolo<name>)
+//                           ⬆️ name Roles                                         //                  ⬆️ name Roles
                     }
-                       
-                    // englesh
-                    if (args[1] === "englesh") {
-                        message.channel.send(`${message.author.username}, you have been added the role!`)
+                    
+                    if (args[1] === "") {
+//                                  ⬆️ name role 2 < nameroles > < italian >
+                        message.channel.send(`${message.author.username}, ti è stato aggiunto il ruolo!`)
                         setTimeout(function() {
                             message.channel.bulkDelete(2);
                         }, 3000);
-                        const ruoloenglesh = message.member.guild.roles.cache.find(role => role.id === id_ruoloenglesh)
-                        if (ruoloenglesh) message.guild.members.cache.get(message.author.id).roles.add(ruoloenglesh)
+                        const ruolo<name> = message.member.guild.roles.cache.find(role => role.id === id_ruolo<name>)
+//                                   ⬆️ name Roles2                                  //                   ⬆️ this is id name roles2
+                        if (ruolo<name>) message.guild.members.cache.get(message.author.id).roles.add(ruolo<name>)
+//                           ⬆️ name Roles                                         //                  ⬆️ name Roles2
                     }
                     
                 }
