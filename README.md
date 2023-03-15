@@ -6,5 +6,3 @@ this is a version update for discord.js V13
 the command is
 
 -role < name roles >
-
-Discord = https://discord.gg/Gq68qBM9XD
